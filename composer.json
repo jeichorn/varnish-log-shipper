@@ -1,0 +1,22 @@
+{
+    "name": "varnish-log-shipper",
+    "description": "Tool for dumping logs from varnish and uploading them to an external server.",
+    "authors": [
+        {
+            "name": "Joshua Eichorn",
+            "email": "joshua.eichorn@pagely.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {  
+            "Shipper\\": "src/Shipper"
+        }
+    },
+    "require": {
+        "symfony/console": "~2.3",
+        "guzzle/guzzle": "~3.7"
+    },
+    "config": {
+        "bin-dir": "bin/"
+    }
+}

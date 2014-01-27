@@ -1,0 +1,12 @@
+#!/usr/bin/php -d disable_functions = show_source
+<?php
+require_once __DIR__.'/vendor/autoload.php';
+
+date_default_timezone_set('UTC');
+
+use Symfony\Component\Console\Application;
+use Shipper\NcsaCommand;
+
+$application = new Application();
+$application->add(new NcsaCommand());
+$application->run();
