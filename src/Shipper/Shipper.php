@@ -131,6 +131,7 @@ class Shipper
 
         $request = $this->http()->put($path);
         $request->setBody(fopen($this->filename($this->domain), 'r'));
+        $request->addHeader('Authorization', $conf['auth']);
 
         $ok = true;
         try
